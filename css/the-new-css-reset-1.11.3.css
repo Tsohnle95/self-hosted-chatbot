@@ -1,0 +1,12 @@
+/**
+ * Minified by jsDelivr using clean-css v5.3.2.
+ * Original file: /npm/the-new-css-reset@1.11.3/css/reset.css
+ *
+ * Do NOT use SRI with dynamically generated files! More information: https://www.jsdelivr.com/using-sri-with-dynamic-files
+ */
+ :where(:not(html,iframe,canvas,img,svg,video,audio,input[type="checkbox"],input[type="radio"]):not(svg *,symbol *)){all:unset;display:revert}*,::after,::before{box-sizing:border-box}html{-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}a,button{cursor:revert}menu,ol,summary,ul{list-style:none}ol{counter-reset:revert}img{max-inline-size:100%;max-block-size:100%}table{border-collapse:collapse}input,textarea{-webkit-user-select:auto}textarea{white-space:revert}meter{-webkit-appearance:revert;appearance:revert}:where(pre){all:revert;box-sizing:border-box}::placeholder{color:unset}:where([hidden]){display:none}:where([contenteditable]:not([contenteditable=false])){-moz-user-modify:read-write;-webkit-user-modify:read-write;overflow-wrap:break-word;-webkit-line-break:after-white-space;-webkit-user-select:auto}:where([draggable=true]){-webkit-user-drag:element}:where(dialog:modal){all:revert;box-sizing:border-box}::-webkit-details-marker{display:none}
+ /*# sourceMappingURL=/sm/14938f40d5317a17db1135a30967ea366d4ada2d19843b600ed5d20915ac82a0.map */
+
+ /* we got this css reset file from our Web Design & usabililty 1 teacher
+ 
+ 

@@ -1,0 +1,243 @@
+/* Base styles */
+
+html {
+    font-size: 100%;
+     font-family: "Inter", sans-serif;
+      background-color: rgb(250, 220, 228);
+     
+}
+
+body {
+  line-height: 1.5;
+
+  /* --- Define the background image and behavior --- */
+
+}
+
+.background-graphic {
+  background-image: url(../img/revised2.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 950px auto; 
+  background-position: calc(50% + 145px) -450px;
+
+  /* --- Keep the rest the same --- */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2; 
+}
+
+.flex-container {
+    display: flex; 
+}
+
+.inner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+}
+
+/* Font size utility classes */
+
+.fs-60 {
+    font-size: 3.75rem;
+}
+
+ .fs-47 {
+    font-size: 2.9375rem;
+ }
+
+ .fs-30 {
+    font-size: 1.875rem;
+ }
+
+ .fs-26 {
+    font-size: 1.625rem;
+ }
+
+ .fs-24 {
+    font-size: 1.5rem;
+} 
+
+.fs-22 {
+    font-size: 1.375rem;
+}
+
+.fs-20 {
+    font-size: 1.25rem;
+}
+
+.fs-18 {
+    font-size: 1.125rem;
+}
+
+.fs-16 {
+    font-size: 1rem;
+}
+
+.fs-14 {
+    font-size: .875rem;
+}
+
+.fs-12 {
+    font-size: .75rem;
+}
+
+.fs-10 {
+    font-size: .625rem;
+}
+
+/********** Font Weight Utility Classes **********/
+
+.fw-bold {
+    font-weight: 600;
+}
+
+/* Colour utility classes */
+
+.white {
+    color: white;
+}
+
+.purple {
+    color: #9889E0;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.light-black { /*text colour */
+    color: #4C3939;
+}
+
+/* alignment utility classes */
+
+.text-center {
+    text-align: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+/********** Landing Page CSS **********/
+/********** Header **********/
+header {
+    margin-bottom: 10rem;
+    position: relative;
+}
+header svg {
+    width: 2rem;
+    background-color: #D39494;
+    border-radius: .375rem; 
+}
+
+header img {
+width: 4rem;
+}
+
+header h1 {
+    margin: 1rem 2rem;
+}
+
+header p{
+    line-height: 1.2;
+    max-width: 30ch;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 1.75rem;
+}
+
+header >div div > a:nth-of-type(1) {
+    background-color: #9889E0;
+    padding: .3rem;
+    border-radius: .75rem 0 0 .75rem;
+    width: 16rem;
+    display: inline-block;
+}
+
+.text-center {
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+    width: fit-content
+}
+
+header >div div > a:nth-of-type(2) {
+    display: inline-block;
+    padding: .3rem;
+    width: 7rem;
+    border-radius: 0 .75rem .75rem 0;
+    margin-left: -0.4rem;
+}
+
+/********** text-body **********/
+.page1 section:nth-of-type(1) {
+    background-color: rgb(250, 228, 246);
+    border-radius: 1.5rem;
+    padding: 3rem 1.5rem;
+    position: absolute;
+    top: 20vh;
+    right: 1.7vh;
+    left: 1.7vh;
+    z-index: -1111;
+    margin: 12rem 1.5rem 0 1.5rem;
+    line-height: 1.25;
+}
+
+.page1 section:nth-of-type(1) p:nth-of-type(1) {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.page1 section:nth-of-type(1) .flex-container div {
+   flex-shrink: 0;
+   margin-right: 1rem;
+}
+
+.page1 section:nth-of-type(2) {
+    position: absolute;
+    top: 89vh;
+} 
+
+.page1 section:nth-of-type(1) span {
+background-color: #E56F6F;
+text-align: center;
+width: 3rem;
+height: 3rem;
+border-radius: 100%;
+line-height: 3rem;
+display: inline-block;
+margin-left: 1rem;;
+}
+
+.page1 section:nth-of-type(1) .flex-container:nth-of-type(1) {
+justify-content: flex-end;
+}
+
+
+
