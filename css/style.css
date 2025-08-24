@@ -9,8 +9,7 @@ html {
 
 body {
   line-height: 1.5;
-
-  /* --- Define the background image and behavior --- */
+  overflow-x: hidden
 
 }
 
