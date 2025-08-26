@@ -15,20 +15,30 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="page1">
-
+<body>
     <div class="background-graphic"></div>
-<div class="background-image">
+
+    <!--Header-->
     <header>
         <div class="inner-container">
-            <div class="flex-container justify-center align-baseline">
+            <!--desktop nav menu-->
+            <nav class="desktop-nav flex-container">
+                <a href="#">
+                    <div class="flex-container">
+                        <img src="img/svg/logo.svg" alt="ChatFlow Logo">
+                        ChatFlow
+                    </div>
+                    <a href="#">Start Promoting!</a>
+                    <a href="#">My Github</a>
+                </a>
+            </nav>
+            <!--end of desktop nav menu-->
+            <div class="flex-container align-center justify-center">
                 <img src="img/svg/logo.svg" alt="ChatFlow Logo">
-                <h1 class="fs-60 fw-bold">ChatFlow</h1>
-
+                <h1 class="fs-xl">ChatFlow</h1>
                 <!-- Dropdown navigation menu -->
-                <nav>
+                <nav class="mobile">
                     <a href="#">
-
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="prefix__size-6">
                             <title>Click to expand menu</title>
@@ -38,42 +48,66 @@
                     </a>
                 </nav>
             </div>
-            <div class="text-center">
-                <p class="white fs-30 fw-bold align-left">Proof that even little models can <span class="purple">chat big.</span>
+            <div class="text-center flex-container align-center">
+                <p class="light-black fs-medsm  align-left">Proof that even little models can <span
+                        class="purple-header fw-bold">chat
+                        big.</span>
                 </p>
                 <div class="button-container flex-container">
-                <a class="white fs-14" href="#">Start prompting!</a>
-                <a class="white bg-black fs-14" href="#">My Github</a>
+                    <a class="white" href="#">Start prompting!</a>
+                    <a class="white bg-black" href="#">My Github</a>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="text-body">
-            <div class="flex-container">
-            <p class="fs-24 light-black">Explain Math.round();</p>
-            <span class="fs-24">T</span>
-            </div>
-            <div class="flex-container">
-                <div>
-            <img src="img/small-logo.png" alt="ChatFlow Logo">
-            </div>
-            <p class="fs-24 light-black">
-                
-                The `Math.round()` function in JavaScript rounds a given number to the nearest whole number. It takes one
-                argument: the number you want to round.</p>
+        <div class="inner-container">
+
+            <section class="section-one text-body flex-container">
+
+                <div class="flex-container align-center justify-right">
+                    <p class="fs-24 light-black">Explain Math.round();</p>
+                    <span class="fs-24">T</span>
                 </div>
-        </section>
-<div class="inner-container"></div>
-        <section class="text-form">
-            <div class="formblock1 align-center flex-container light-black ">
-            <img src="img/small-logo.png" alt="ChatFlow Logo">
-            <p class="fs-20">Give it a try!</p>
-           
-        </section>
-       
+
+                <div class="flex-container">
+
+                    <div>
+                        <img src="img/small-logo.png" alt="ChatFlow Logo">
+                    </div>
+                    <p class="fs-24 light-black">
+                        The `Math.round()` function in JavaScript rounds a given number to the nearest whole number. It
+                        takes one
+                        argument: the number you want to round.</p>
+                </div>
+
+                <!--Input box for desktop-->
+                <section class="text-form desktop-form">
+                    <div class="formblock1 align-center flex-container light-black ">
+                        <img src="img/small-logo.png" alt="ChatFlow Logo">
+                        <p class="fs-sm">Give it a try!</p>
+                    </div>
+                </section>
+
+            </section>
+
+        </div>
     </main>
+
+    <footer>
+        <div class="inner-container">
+            <section class="text-form mobile-form">
+                <div class="formblock1 align-center flex-container light-black ">
+                    <img src="img/small-logo.png" alt="ChatFlow Logo">
+                    <p class="fs-sm">Give it a try!</p>
+                </div>
+            </section>
+        </div>
+
+        <!--desktop footer-->
+        <a class="desktop-footer"href="#">Give it a try!</a>
+    </footer>
 
 </body>
 
