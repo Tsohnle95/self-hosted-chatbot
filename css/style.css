@@ -139,11 +139,17 @@ main {
     margin: 0 auto;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 /*********** PAGE ONE/LANDING PAGE ***********/
 /* header */
 header {
-    /* padding-top: 1rem; */
+    padding-top: 1rem;
 }
+
+
 
 header svg {
     width: 2rem;
