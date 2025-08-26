@@ -165,7 +165,7 @@ header img {
 }
 
 header>div>div:nth-of-type(1) {
-    gap: 1rem;
+    gap: .75rem;
 }
 
 .button-container {
