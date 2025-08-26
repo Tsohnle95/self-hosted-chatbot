@@ -52,7 +52,7 @@ main {
 }
 
 .fs-xl {
-    font-size: 2.986rem;
+    font-size: 2.9rem;
 }
 
 .fs-lg {
@@ -157,7 +157,7 @@ header svg {
 }
 
 header img {
-    width: 3rem;
+    width: 2.75rem;
 }
 
 .text-center {
@@ -165,7 +165,7 @@ header img {
 }
 
 header>div>div:nth-of-type(1) {
-    /* gap: .75rem; */
+    gap: .75rem;
 }
 
 .button-container {
