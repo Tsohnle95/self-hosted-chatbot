@@ -38,15 +38,15 @@ main::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: calc(100% - 3rem);
+    width: calc(100% - 4rem);
     max-width: 950px;
-    height: 305px;
+    height: 290px;
     background-image: url(../img/gradient-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     /* background-size: cover; */
     border-radius: 2rem;
-    filter: blur(10px);
+    filter: blur(25px);
     z-index: -1;
 }
 
@@ -242,6 +242,7 @@ header>div>div:nth-of-type(1) {
 /* first section */
 .section-one {
     background-color: #ffffff;
+    background-color: #eee6e6;
     /* background-color: rgb(247, 240, 245); */
     /* background-color: rgb(250, 228, 246); */
 
