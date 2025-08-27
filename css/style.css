@@ -1,6 +1,13 @@
+:root {
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+        Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji";
+}
+
 html {
     font-size: 100%;
     font-family: "Inter", sans-serif;
+    font-family: "Mona Sans", "Inter", sans-serif;
     /* background-color: rgb(250, 220, 228); */
 }
 
@@ -10,6 +17,7 @@ body {
     height: 100dvh;
     display: flex;
     flex-direction: column;
+    background-color: rgb(6, 8, 63);
 }
 
 main {
@@ -17,6 +25,48 @@ main {
     display: flex;
     align-items: center;
 }
+
+/* to revert to main design, uncomment this main and main::Before, uncomment the background css design, then change colour classes on html attributes */
+
+main {
+    position: relative;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 3rem);
+    max-width: 950px;
+    height: 305px;
+    background-image: url(../img/gradient-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    border-radius: 2rem;
+    filter: blur(10px);
+    z-index: -1;
+}
+
+/* Background css design:  */
+/* background CSS */
+
+/* .background-graphic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/bg-1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+} */
+
 
 .inner-container {
     width: 100%;
@@ -30,30 +80,15 @@ main {
     display: flex;
 }
 
-/* background CSS */
-.background-graphic {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100vh;
-    /* background-image: url(../img/gradient-background.jpg); */
-    background-image: url(../img/bg-1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transform: rotate(180deg);
-    /* background-image: linear-gradient(to bottom, rgb(248, 204, 227), rgb(255, 254, 241)); */
-}
+
 
 /* Font size utility classes */
 .fs-xxl {
-    font-size: 3.815rem
+    font-size: 4rem;
 }
 
 .fs-xl {
-    font-size: 2.6rem;
+    font-size: 2.986rem;
 }
 
 .fs-lg {
@@ -153,6 +188,7 @@ header {
 header svg {
     width: 2rem;
     border-radius: .375rem;
+    color: white
 }
 
 header img {
@@ -196,6 +232,11 @@ header>div>div:nth-of-type(1) {
     color: white;
     padding: .3rem 1rem;
     border-radius: .375rem;
+    border: 1px solid white;
+}
+
+.btn {
+    font-family: var(--font-sans-serif);
 }
 
 /* first section */
@@ -205,7 +246,7 @@ header>div>div:nth-of-type(1) {
     /* background-color: rgb(250, 228, 246); */
 
     /* background-color: rgb(190, 189, 190); */
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     padding: 1.5rem;
     line-height: 1.5;
     flex-direction: column;
@@ -236,9 +277,10 @@ header>div>div:nth-of-type(1) {
 }
 
 .section-one>div p:first-child {
-    /* background-color: #f8c7df;
-    /* background-color: #84b7f7; */
-    background-color: rgb(250, 220, 228);
+    background-color: #f8c7df;
+     /* background-color: #84b7f7;  */
+    /* background-color: rgb(250, 220, 228); */
+     /* background-color: rgb(192, 188, 189); */
     padding: .5rem;
     border-radius: .375rem .375rem 0 .375rem;
 }
@@ -271,7 +313,6 @@ header>div>div:nth-of-type(1) {
 .desktop-chatbox>div {
     margin-bottom: 1rem;
 }
-
 
 /*Desktop form input */
 .desktop-form {
@@ -320,7 +361,7 @@ footer {
         display: block;
     }
 
-    .desktop-form > div > img {
+    .desktop-form>div>img {
         margin-right: .5rem;
     }
 
@@ -333,8 +374,13 @@ footer {
         padding-bottom: 3rem;
     }
 
+    /* .desktop-nav > .flex-container {
+        gap: 5rem;
+    } */
+
     .desktop-footer {
         display: block;
+        max-width: 22rem;
     }
 
     .mobile {
@@ -345,8 +391,8 @@ footer {
         max-width: 900px;
     }
 
-    .fs-xl {
-        font-size: 3.2rem;
+    .fs-lg {
+        font-size: 2.986rem;
     }
 
     .fs-sm {
@@ -375,10 +421,6 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
 } */
-    
-main {
-        position: relative;
-    }
 
     main::before {
         content: '';
@@ -386,21 +428,24 @@ main {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: calc(100% - 1rem); /* Adjust based on your section width */
-        max-width: 870px; /* Slightly larger than your max-width */
-        height: 400px; /* Adjust based on your section height */
+        width: calc(100% - 1rem);
+        max-width: 950px;
+        height: 480px;
         background-image: url(../img/gradient-bg.png);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: cover;
         border-radius: 2rem;
-        filter: blur(100px);
+        filter: blur(25px);
         z-index: -1;
     }
 
+
     .section-one {
         background-color: #ffffff;
-        border-radius: 3.5625rem;
+        background-color: #eee6e6;
+
+        /* background-color: #e8d9d9; */
+        /* background-color: #e5bebe; */
         padding: 1.5rem;
         line-height: 1.5;
         flex-direction: column;
@@ -412,3 +457,8 @@ main {
 
 }
 
+@media (min-width: 1012px) {
+    .fs-lg {
+        font-size: 4rem;
+    }
+}
