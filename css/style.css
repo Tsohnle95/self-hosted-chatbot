@@ -361,6 +361,10 @@ footer {
         border-radius: .375rem .375rem 0 .375rem;
     }
 
+    .button-container {
+        display: none;
+    }
+
     /* main {
      background-image: url(../img/gradient-bg.png);
     background-position: center;
