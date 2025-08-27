@@ -22,16 +22,18 @@
     <header>
         <div class="inner-container">
             <!--desktop nav menu-->
-            <nav class="desktop-nav flex-container ">
-                <a href="#">
-                    <div class="flex-container">
-                        <img src="img/svg/logo.svg" alt="ChatFlow Logo">
-                        ChatFlow
-                    </div>
-                     </a>
-                    <a href="#">Start Promoting!</a>
-                    <a href="#">My Github</a>
-               
+            <nav class="desktop-nav">
+                <div class="flex-container justify-between inner-container">
+                    <a href="#">
+                        <div class="flex-container">
+                            <img src="img/svg/logo.svg" alt="ChatFlow Logo">
+                            ByteBloom
+                        </div>
+                    </a>
+                    <a href="#">Start Prompting!</a>
+                    <a class="github-btn" href="#">My Github</a>
+                </div>
+
             </nav>
             <!--end of desktop nav menu-->
             <div class="flex-container flex-wrap align-center justify-center">
@@ -63,10 +65,12 @@
     </header>
 
     <main>
+       
         <div class="inner-container">
 
             <section class="section-one text-body flex-container">
 
+                <div class="mobile-chatbox">
                 <div class="flex-container align-center justify-right">
                     <p class="fs-24 light-black">Explain Math.round();</p>
                     <span class="fs-24">T</span>
@@ -82,12 +86,36 @@
                         takes one
                         argument: the number you want to round.</p>
                 </div>
+                </div>
+
+                <!--Desktop chatbox-->
+                <div class="desktop-chatbox">
+                    <div class="flex-container align-center justify-right">
+                        <p class="fs-24 light-black">Hello! Please provide the syntax for an arrow function in js.
+                        </p>
+                        <span class="fs-24">T</span>
+                    </div>
+
+                    <div class="flex-container">
+
+                        <div>
+                            <img src="img/small-logo.png" alt="ChatFlow Logo">
+                        </div>
+                        <p class="fs-24 light-black">
+                            Arrow functions in JavaScript offer a concise way to define functions. Here's the basic syntax:<br>
+                            <br>```javascript<br>const arrowFunction = (parameters) => {<br>  // Function body code<br>  return expression;<Br> }<br>```<br>Let me know if you'd like more detailed explanations about using arrow functions in your code.</p>
+                    </div>
+                </div>
+
+
+
+
 
                 <!--Input box for desktop-->
-                <section class="text-form desktop-form">
+                <section class="desktop-input desktop-form">
                     <div class="formblock1 align-center flex-container light-black ">
                         <img src="img/small-logo.png" alt="ChatFlow Logo">
-                        <p class="fs-sm">Give it a try!</p>
+                        <p class="fs-sm">Ask a question!</p>
                     </div>
                 </section>
 
@@ -104,10 +132,11 @@
                     <p class="fs-sm">Give it a try!</p>
                 </div>
             </section>
-        </div>
+            <!--desktop footer-->
 
-        <!--desktop footer-->
-        <a class="desktop-footer" href="#">Give it a try!</a>
+        </div>
+        <a class="desktop-footer white" href="#">Give it a try!</a>
+
     </footer>
 
 </body>
