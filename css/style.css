@@ -278,13 +278,6 @@ header>div>div:nth-of-type(1) {
     display: none;
 }
 
-/* .mobile-form {
-    display: none; <<--- add this to a media query
-} */
-
-
-
-
 /* Footer */
 
 footer {
@@ -298,7 +291,7 @@ footer {
     width: 35%;
     margin: 0 auto;
     text-align: center;
-    border-radius: .4rem;
+    border-radius: .375rem;
     padding: .35rem 0;
 }
 
@@ -327,6 +320,10 @@ footer {
         display: block;
     }
 
+    .desktop-form > div > img {
+        margin-right: .5rem;
+    }
+
     .mobile-form {
         display: none;
     }
@@ -346,6 +343,14 @@ footer {
 
     header>div>nav>.inner-container {
         max-width: 900px;
+    }
+
+    .fs-xl {
+        font-size: 3.2rem;
+    }
+
+    .fs-sm {
+        font-size: 1.44rem;
     }
 
     /* main */
@@ -384,29 +389,26 @@ main {
         width: calc(100% - 1rem); /* Adjust based on your section width */
         max-width: 870px; /* Slightly larger than your max-width */
         height: 400px; /* Adjust based on your section height */
-        
         background-image: url(../img/gradient-bg.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 2rem;
-        
         filter: blur(100px);
-        /* This will be behind everything in main */
         z-index: -1;
     }
 
     .section-one {
         background-color: #ffffff;
-        border-radius: 1.5rem;
+        border-radius: 3.5625rem;
         padding: 1.5rem;
         line-height: 1.5;
         flex-direction: column;
         gap: 1rem;
-        /* Ensure this is above the blur */
         position: relative;
         z-index: 1;
     }
+
 
 }
 
