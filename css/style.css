@@ -182,10 +182,6 @@ main::before {
     flex-wrap: wrap;
 }
 
-.gap {
-    gap: .5rem;
-}
-
 /*********** PAGE ONE/LANDING PAGE ***********/
 /* header */
 header {
@@ -195,7 +191,8 @@ header {
 header svg {
     width: 2rem;
     border-radius: .375rem;
-    color: white
+    color: white;
+    margin-left: .75rem;
 }
 
 header img {
@@ -207,7 +204,7 @@ header img {
 }
 
 header>div>div:nth-of-type(1) {
-    gap: .75rem;
+    /* gap: .75rem; */
 }
 
 .button-container {
@@ -490,7 +487,7 @@ footer {
 }
 
 .app main > .inner-container {
-    padding: 0 1rem;
+    padding: 0 .5rem;
 }
 
 .chat-text {
