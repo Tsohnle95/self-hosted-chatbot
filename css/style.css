@@ -292,6 +292,10 @@ header>div>div:nth-of-type(1) {
     border-radius: .375rem .375rem 0 .375rem;
 }
 
+.user-message-box {
+    margin-right: 1rem;
+}
+
 .section-one div:nth-child(2) p {
     /* background-color: rgb(250, 220, 228); */
     /* padding: .5rem; */
