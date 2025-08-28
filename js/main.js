@@ -54,12 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // --- FUNCTION to automatically scroll to the bottom ---
-    const scrollToBottom = () => {
-        // The chatContainer variable is already defined in your code
+   const scrollToBottom = () => {
+    // setTimeout to ensure the browser has rendered the new message
+    // and updated the scrollHeight BEFORE scrolling.
+    setTimeout(() => {
         chatContainer.scrollTop = chatContainer.scrollHeight;
-    };
+    }, 0);
+};
 
-    // --- FUNCTION to get response from the AI backend ---
+    // fetch backend response
     const getAIResponse = async (userQuery) => {
         // Display a temporary "Thinking..." message
         displayAIMessage('Thinking...');
