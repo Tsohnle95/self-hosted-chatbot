@@ -2,21 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ChatFlow</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <script src="js/main.js" defer></script>
-    <link href="css/the-new-css-reset-1.11.3.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/the-new-css-reset-1.11.3.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/utilities.css" rel="stylesheet" />
 </head>
 
 <body class="index">
@@ -24,7 +25,7 @@
 
     <!--Header-->
     <header>
-        <div class="tester inner-container">
+        <div class="inner-container">
             <!--desktop nav menu-->
             <nav class="desktop-nav">
                 <div class="flex-container justify-between inner-container">
@@ -37,12 +38,12 @@
                     <a class="btn white" href="webApp.html">Start Chatting!</a>
                     <a class="github-btn btn" href="https://github.com/Tsohnle95?tab=repositories">My Github</a>
                 </div>
-
             </nav>
             <!--end of desktop nav menu-->
+
             <div class="flex-container flex-wrap align-center justify-center">
-                <img src="img/svg/logo.svg" alt="ChatFlow Logo">
-                <h1 class="fs-lg white">ChatFlow</h1>
+                <img src="img/svg/logo.svg" alt="ChatFlow Logo" />
+                <h1 class="landing-h1 white">ChatFlow</h1>
                 <!-- Dropdown navigation menu -->
                 <nav class="mobile">
                     <a href="#">
@@ -56,8 +57,9 @@
                 </nav>
             </div>
             <div class="text-center flex-container align-center">
-                <p class="white fs-sm  align-left">Proof that even little models can <span class="white fw-bold">chat
-                        big.</span>
+                <p class="white fs-sm align-left">
+                    Proof that even little models can
+                    <span class="white fw-bold">chat big.</span>
                 </p>
                 <div class="button-container flex-container">
                     <a class="white btn" href="webApp.html">Start Chatting!</a>
@@ -68,88 +70,77 @@
     </header>
 
     <main>
-
         <div class="inner-container">
-
             <section class="section-one text-body flex-container">
-
                 <div class="mobile-chatbox">
                     <div class="flex-container align-center justify-right">
                         <p class="fs-24 light-black">Explain Math.round();</p>
                         <span class="fs-24">T</span>
                     </div>
-
                     <div class="flex-container">
-
                         <div>
-                            <img src="img/small-logo.png" alt="ChatFlow Logo">
+                            <img src="img/small-logo.png" alt="ChatFlow Logo" />
                         </div>
                         <p class="fs-24 light-black">
-                            The `Math.round()` function in JavaScript rounds a given number to the nearest whole number.
-                            It
-                            takes one
-                            argument: the number you want to round.</p>
+                            The `Math.round()` function in JavaScript rounds a given number
+                            to the nearest whole number. It takes one argument: the number
+                            you want to round.
+                        </p>
                     </div>
                 </div>
 
                 <!--Desktop chatbox-->
                 <div class="desktop-chatbox">
                     <div class="flex-container align-center justify-right">
-                        <p class="fs-24 light-black">Hello! Please provide the syntax for an arrow function in js.
+                        <p class="fs-24 light-black">
+                            Hello! Please provide the syntax for an arrow function in js.
                         </p>
                         <span class="fs-24">T</span>
                     </div>
-
                     <div class="flex-container">
-
                         <div>
-                            <img src="img/small-logo.png" alt="ChatFlow Logo">
+                            <img src="img/small-logo.png" alt="ChatFlow Logo" />
                         </div>
                         <p class="fs-24 light-black">
-                            Arrow functions in JavaScript offer a concise way to define functions. Here's the basic
-                            syntax:<br>
-                            <br>```javascript<br>const arrowFunction = (parameters) => {<br> // Function body code<br>
-                            return expression;<br> }<br>```<br>Let me know if you'd like more detailed explanations
-                            about using arrow functions in your code.
+                            Arrow functions in JavaScript offer a concise way to define
+                            functions. Here's the basic syntax:<br />
+                            <br />```javascript<br />const arrowFunction = (parameters) =>
+                            {<br />
+                            // Function body code<br />
+                            return expression;<br />
+                            }<br />```<br />Let me know if you'd like more detailed
+                            explanations about using arrow functions in your code.
                         </p>
                     </div>
                 </div>
 
-
-
-
-
                 <!--Input box for desktop-->
                 <section class="desktop-input desktop-form">
-                    <div class="formblock1 align-center flex-container light-black ">
-                        <img src="img/small-logo.png" alt="ChatFlow Logo">
+                    <div class="formblock1 align-center flex-container light-black">
+                        <img src="img/small-logo.png" alt="ChatFlow Logo" />
                         <a href="webApp.html">
                             <p>Ask a question!</p>
                         </a>
                     </div>
                 </section>
-
             </section>
-
         </div>
     </main>
 
     <footer>
         <div class="inner-container">
             <section class="text-form mobile-form">
-                <div class="formblock1 align-center flex-container light-black ">
-                    <img src="img/small-logo.png" alt="ChatFlow Logo">
+                <div class="formblock1 align-center flex-container light-black">
+                    <img src="img/small-logo.png" alt="ChatFlow Logo" />
                     <a href="webApp.html">
                         <p class="fs-sm white">Give it a try!</p>
                     </a>
                 </div>
             </section>
             <!--desktop footer-->
-
         </div>
         <a class="desktop-footer white" href="webApp.html">
             <div class="flex-container justify-center">
-
                 Launch web app
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6">
@@ -157,13 +148,9 @@
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z" />
                 </svg>
-
             </div>
         </a>
-        
-
     </footer>
-
 </body>
 
 </html>

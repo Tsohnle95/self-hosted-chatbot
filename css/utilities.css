@@ -1,0 +1,152 @@
+:root {
+    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans",
+        Helvetica, Arial, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji";
+}
+
+html {
+    font-size: 100%;
+    font-family: "Mona Sans", "Inter", sans-serif;
+}
+
+/* layout settings */
+body {
+    line-height: 1.5;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(6, 8, 63);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    min-height: 0;
+    position: relative;
+}
+
+main::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 4rem);
+    max-width: 950px;
+    height: 290px;
+    background-image: url(../img/gradient-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 2rem;
+    filter: blur(25px);
+    z-index: -1;
+}
+
+.inner-container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+}
+
+/* Font size utility classes */
+.fs-xxl {
+    font-size: 4rem;
+}
+
+.fs-xl {
+    font-size: 2.986rem;
+}
+
+.fs-lg {
+    font-size: 2.488rem;
+}
+
+.fs-medlg {
+    font-size: 2.074rem;
+}
+
+.fs-med {
+    font-size: 1.728rem;
+}
+
+.fs-medsm {
+    font-size: 1.44rem;
+}
+
+.fs-sm {
+    font-size: 1.2rem;
+}
+
+.fs-xsm {
+    font-size: 0.833rem;
+}
+
+/********** Font Weight Utility Classes **********/
+.fw-bold {
+    font-weight: 600;
+}
+
+/* Colour utility classes */
+.white {
+    color: white;
+}
+
+.purple {
+    color: #9889E0;
+}
+
+.purple-header {
+    color: #735ce3;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.light-black {
+    color: #4C3939;
+}
+
+/* alignment utility classes */
+.text-center {
+    text-align: center;
+}
+
+.justify-right {
+    justify-content: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.margin-auto {
+    margin: 0 auto;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
