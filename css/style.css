@@ -489,6 +489,10 @@ footer {
     box-sizing: border-box;
 }
 
+.app main > .inner-container {
+    padding: 0 1rem;
+}
+
 .chat-text {
     overflow-wrap: break-word;
     word-wrap: break-word;
