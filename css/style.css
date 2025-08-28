@@ -370,7 +370,7 @@ footer {
 
 /*********** Desktop landing page***********/
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
 
     /* reveal components */
     .desktop-form {
@@ -585,7 +585,7 @@ footer .submit-btn svg {
     display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     .mobile-text {
         display: none;
     }
