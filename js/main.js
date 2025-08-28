@@ -1,0 +1,127 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+    // --- SETUP: Get all elements once ---
+    const submitButtons = document.querySelectorAll('.submit-btn');
+    const mobileInput = document.querySelector('#promptInputMobile');
+    const desktopInput = document.querySelector('#promptInput');
+    const allInputs = [mobileInput, desktopInput];
+    const chatContainer = document.querySelector('.chat-container');
+
+
+    // --- FUNCTION to display the user's message ---
+    const displayUserMessage = (message) => {
+        const userMessageDiv = document.createElement('div');
+        userMessageDiv.className = 'user-message-box flex-container align-center justify-right';
+
+        const userParagraph = document.createElement('p');
+        userParagraph.className = 'desktop-text fs-24 light-black';
+        userParagraph.textContent = message;
+
+        const userInitial = document.createElement('span');
+        userInitial.className = 'fs-24';
+        userInitial.textContent = 'T'; // 
+
+        userMessageDiv.appendChild(userParagraph);
+        userMessageDiv.appendChild(userInitial);
+        chatContainer.appendChild(userMessageDiv);
+    };
+
+    // --- FUNCTION to display the Aos message ---
+    const displayAIMessage = (message) => {
+        const aiMessageContainer = document.createElement('div');
+        aiMessageContainer.className = 'flex-container';
+
+        const aiIconDiv = document.createElement('div');
+        aiIconDiv.className = 'ai-message-box flow-icon';
+        const aiImage = document.createElement('img');
+        aiImage.src = 'img/small-logo.png';
+        aiImage.alt = 'ChatFlow Logo';
+        aiIconDiv.appendChild(aiImage);
+
+        const aiParagraph = document.createElement('p');
+        aiParagraph.className = 'desktop-text fs-24 light-black';
+        aiParagraph.textContent = message;
+
+        aiMessageContainer.appendChild(aiIconDiv);
+        aiMessageContainer.appendChild(aiParagraph);
+        chatContainer.appendChild(aiMessageContainer);
+    };
+
+    // --- FUNCTION to get response from the AI backend ---
+    const getAIResponse = async (userQuery) => {
+        // Display a temporary "Thinking..." message
+        displayAIMessage('Thinking...');
+        try {
+            const response = await fetch('https://mammal-capable-really.ngrok-free.app/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'ngrok-skip-browser-warning': 'true', // Important for ngrok
+                    'X-API-KEY': "a-very-hard-to-guess-string-123!@#" // API Key
+                },
+                body: JSON.stringify({
+                    prompt: userQuery
+                })
+            });
+
+            // Remove the "Thinking..." message
+            chatContainer.lastChild.remove();
+            const data = await response.json();
+
+            if (response.ok) {
+                displayAIMessage(data.response);
+            } else {
+                displayAIMessage('Error: ' + (data.error || 'Unknown error'));
+            }
+        } catch (error) {
+            // Remove the "Thinking..." message on failure too
+            if (chatContainer.lastChild) {
+                chatContainer.lastChild.remove();
+            }
+            displayAIMessage('Failed to connect to the backend server.');
+            console.error('Fetch error:', error);
+        }
+    };
+
+
+    // --- LOGIC: The function that handles submission ---
+    const submission = (event) => {
+        // Prevent form from submitting and reloading the page
+        event.preventDefault();
+
+        // Check which input field has a value
+        const userQuery = desktopInput.value.trim() || mobileInput.value.trim();
+
+        // If both fields are empty, do nothing
+        if (!userQuery) {
+            return;
+        }
+
+        // 1. Display the user's message on the screen
+        displayUserMessage(userQuery);
+
+        // 2. Send the user's query to the backend
+        getAIResponse(userQuery);
+
+
+        // 3. Clear both input fields after submission
+        desktopInput.value = '';
+        mobileInput.value = '';
+    };
+
+    // --- BINDING: Attach the event listeners ---
+
+    // Event listener for clicks on both buttons
+    submitButtons.forEach(button => {
+        button.addEventListener('click', submission);
+    });
+
+    // Event listener for "Enter" keypress on both input fields
+    allInputs.forEach(input => {
+        input.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                submission(event);
+            }
+        });
+    });
+});

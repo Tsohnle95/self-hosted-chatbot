@@ -179,6 +179,10 @@ main::before {
     flex-wrap: wrap;
 }
 
+.gap {
+    gap: .5rem;
+}
+
 /*********** PAGE ONE/LANDING PAGE ***********/
 /* header */
 header {
@@ -258,7 +262,8 @@ header>div>div:nth-of-type(1) {
     margin-bottom: 1rem;
 }
 
-.section-one span {
+.section-one span,
+.app main div section div span {
     background-color: #E56F6F;
     text-align: center;
     width: 2rem;
@@ -267,6 +272,7 @@ header>div>div:nth-of-type(1) {
     line-height: 2rem;
     margin-left: 1rem;
 }
+
 
 .section-one .flex-container:nth-of-type(2)>div {
     margin-right: 1rem;
@@ -277,11 +283,12 @@ header>div>div:nth-of-type(1) {
     width: 1.875rem;
 }
 
-.section-one>div p:first-child {
+.section-one>div p:first-child,
+.mobile-chatbox > div:first-child p{
     background-color: #f8c7df;
-     /* background-color: #84b7f7;  */
+    /* background-color: #84b7f7;  */
     /* background-color: rgb(250, 220, 228); */
-     /* background-color: rgb(192, 188, 189); */
+    /* background-color: rgb(192, 188, 189); */
     padding: .5rem;
     border-radius: .375rem .375rem 0 .375rem;
 }
@@ -297,6 +304,7 @@ header>div>div:nth-of-type(1) {
     border: 1px solid #4C3939;
     border-radius: 1.25rem;
     padding: .5rem 1.5rem;
+    width: 100%;
 }
 
 .desktop-input>div>img {
@@ -329,28 +337,28 @@ footer {
 
 .desktop-footer {
     display: none;
-    background-color: #9889E0;
+    /* background-color: #ffffff; */
     width: 35%;
     margin: 0 auto;
     text-align: center;
     border-radius: .375rem;
     padding: .35rem 0;
+    /* color: rgb(6, 8, 63); */
+    color: white;
+    font-size: 1.44rem;
 }
 
-.text-form>div {
-    border: 1px solid #4C3939;
+.text-form>div,
+.mobile-input {
+    border: 1px solid #ffffff;
     border-radius: 1.5rem;
     padding: 1rem 1.5rem;
     gap: 1rem;
+    width: 100%
 }
 
 .text-form>div>img {
-    width: 1.875rem;
-}
-
-/* desktop footer */
-.desktop-footer {
-    display: none;
+    width: 1.5rem;
 }
 
 /*********** Desktop landing page***********/
@@ -375,17 +383,9 @@ footer {
         padding-bottom: 3rem;
     }
 
-    /* .desktop-nav > .flex-container {
-        gap: 5rem;
-    } */
-
     .desktop-footer {
         display: block;
         max-width: 22rem;
-    }
-
-    .mobile {
-        display: none;
     }
 
     header>div>nav>.inner-container {
@@ -417,11 +417,6 @@ footer {
         display: none;
     }
 
-    /* main {
-     background-image: url(../img/gradient-bg.png);
-    background-position: center;
-    background-repeat: no-repeat;
-} */
 
     main::before {
         content: '';
@@ -440,7 +435,6 @@ footer {
         z-index: -1;
     }
 
-
     .section-one {
         background-color: #ffffff;
         background-color: #eee6e6;
@@ -455,11 +449,107 @@ footer {
         z-index: 1;
     }
 
+.app .mobile-chatbox {
+    display: block;
+}
 
 }
 
-@media (min-width: 1012px) {
-    .fs-lg {
-        font-size: 4rem;
+/***************** APP PAGE /*****************/
+/***************** MOBILE VIEW /*****************/
+
+/* h1 font size */
+.app h1 {
+    font-size: 2.488rem;
+}
+
+/* chatbox  */
+.app-chatbox {
+    background-color: #eee6e6;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    line-height: 1.5;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app .flow-icon {
+    width: 1.875rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+.desktop-text {
+    display: none;
+}
+
+.form-input{
+    background-image: url(../img/small-logo.png);
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: 1rem center;
+    padding-left: 3rem;
+    padding-right: 3.5rem;
+    width: 100%;
+}
+
+
+/* .form-input:focus {
+    background-image: none
+} */
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+footer svg {
+    width: 1.5rem;
+    margin-left: .5rem;
+}
+
+.submit-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+}
+
+.submit-btn svg {
+    width: 1.5rem;
+    stroke: rgb(6, 8, 63);
+}
+
+footer .submit-btn svg {
+    width: 1.5rem;
+    stroke: #ffffff;
+}
+
+.mobile-chatbox .input-wrapper {
+    display: none;
+}
+
+
+@media (min-width: 600px) {
+    .mobile-text {
+        display: none;
+    }
+    
+    .desktop-text {
+        display: block;
+    }
+
+    .mobile-input {
+        display: none;
+    }
+    .mobile-chatbox .input-wrapper{
+        display: block;
+    }
+
+    .app footer {
+        display: none;
     }
 }

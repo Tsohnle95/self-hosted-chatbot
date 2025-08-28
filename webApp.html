@@ -1,11 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Let the chats flow!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <script src="js/main.js" defer></script>
+    <link href="css/the-new-css-reset-1.11.3.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
 </head>
-<body>
-    
+
+<body class="app">
+
+    <!--Header-->
+    <header>
+        <div class="inner-container">
+            <div class="flex-container flex-wrap align-center justify-between">
+                <div class="flex-container gap">
+                    <img src="img/svg/logo.svg" alt="ChatFlow Logo">
+                    <h1 class="fs-lg white">ChatFlow</h1>
+                </div>
+                <a class="github-btn btn" href="https://github.com/Tsohnle95?tab=repositories">My Github</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="inner-container">
+
+            <section class="app-chatbox text-body flex-container align-center"> <!--section one in css-->
+
+                <div class="mobile-chatbox">
+                    <div class="chat-container">
+                    <div class="user-message-box flex-container align-center justify-right">
+                        <p class="mobile-text fs-24 light-black">Explain Math.round();</p>
+                        <p class="desktop-text fs-24 light-black">Hello! Please provide the syntax for an arrow function
+                            in js.
+                        </p>
+                        <span class="fs-24">T</span>
+                    </div>
+
+                    <div class="flex-container">
+
+                        <div class="ai-message-box flow-icon">
+                            <img src="img/small-logo.png" alt="ChatFlow Logo">
+                        </div>
+                        <p class="mobile-text fs-24 light-black">
+                            The `Math.round()` function in JavaScript rounds a given number to the nearest whole number.
+                            It
+                            takes one
+                            argument: the number you want to round.</p>
+                        <p class="desktop-text fs-24 light-black">
+                            Arrow functions in JavaScript offer a concise way to define functions. Here's the basic
+                            syntax:<br>
+                            <br>```javascript<br>const arrowFunction = (parameters) => {<br> // Function body code<br>
+                            return expression;<br> }<br>```<br>Let me know if you'd like more detailed explanations
+                            about using arrow functions in your code.
+                        </p>
+                    </div>
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" id="promptInput" name="promptInput" placeholder="Ask a question!"
+                            class="form-input desktop-input desktop-form light-black">
+                        <button type="submit" class="submit-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <title>Submit</title>
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="inner-container">
+            <div class="input-wrapper">
+            <input type="text" id="promptInputMobile" name="promptInput" placeholder="Ask a question!"
+                class="form-input mobile-input white fs-sm">
+            <button type="submit" class="submit-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <title>Click to submit</title>
+    <path stroke-linecap="round" stroke-linejoin="round" d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+</svg>
+
+                </button>
+
+                </div>
+        </div>
+    </footer>
+
+
 </body>
+
 </html>
