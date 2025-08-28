@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatContainer = document.querySelector('.chat-container');
 
 
+let isFirstSubmission = true; // Flag to track if it's the first submission
+
     // --- FUNCTION to display the user's message ---
     const displayUserMessage = (message) => {
         const userMessageDiv = document.createElement('div');
@@ -85,29 +87,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // --- LOGIC: The function that handles submission ---
-    const submission = (event) => {
-        // Prevent form from submitting and reloading the page
-        event.preventDefault();
+    // --- LOGIC: The function that handles submission ---
+const submission = (event) => {
+    // Prevent form from submitting and reloading the page
+    event.preventDefault();
 
-        // Check which input field has a value
-        const userQuery = desktopInput.value.trim() || mobileInput.value.trim();
+    // Check if it's the first time the user has submitted
+    if (isFirstSubmission) {
+        // Find the container with the example messages
+        const initialMessages = document.querySelector('.initial-chat-examples');
+        
+        // If that container exists...
+        if (initialMessages) {
+            // ...remove it.
+            initialMessages.remove();
+        } // <-- The first missing brace goes here to close the inner 'if'
 
-        // If both fields are empty, do nothing
-        if (!userQuery) {
-            return;
-        }
+        // Now that we have handled the first submission, set the flag to false
+        // so this block of code will never run again.
+        isFirstSubmission = false;
+    } // <-- The second brace goes here to close the outer 'if'
 
-        // 1. Display the user's message on the screen
-        displayUserMessage(userQuery);
+    // --- The rest of the function continues as normal ---
 
-        // 2. Send the user's query to the backend
-        getAIResponse(userQuery);
+    // Check which input field has a value
+    const userQuery = desktopInput.value.trim() || mobileInput.value.trim();
+
+    // If both fields are empty, do nothing
+    if (!userQuery) {
+        return;
+    }
+
+    // 1. Display the user's message on the screen
+    displayUserMessage(userQuery);
+
+    // 2. Send the user's query to the backend
+    getAIResponse(userQuery);
 
 
-        // 3. Clear both input fields after submission
-        desktopInput.value = '';
-        mobileInput.value = '';
-    };
+    // 3. Clear both input fields after submission
+    desktopInput.value = '';
+    mobileInput.value = '';
+};
 
     // --- BINDING: Attach the event listeners ---
 

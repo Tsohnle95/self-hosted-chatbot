@@ -283,12 +283,8 @@ header>div>div:nth-of-type(1) {
     width: 1.875rem;
 }
 
-.section-one>div p:first-child,
-.mobile-chatbox > div:first-child p{
-    background-color: #f8c7df;
-    /* background-color: #84b7f7;  */
-    /* background-color: rgb(250, 220, 228); */
-    /* background-color: rgb(192, 188, 189); */
+.user-message-box p {
+    background-color: #f8c7df; /* The pink user message bubble */
     padding: .5rem;
     border-radius: .375rem .375rem 0 .375rem;
 }
