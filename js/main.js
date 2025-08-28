@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- FUNCTION to display the Aos message ---
     const displayAIMessage = (message) => {
         const aiMessageContainer = document.createElement('div');
-        aiMessageContainer.className = 'flex-container';
+        aiMessageContainer.className = 'flex-container ai-message-row';
 
         const aiIconDiv = document.createElement('div');
         aiIconDiv.className = 'ai-message-box flow-icon';
