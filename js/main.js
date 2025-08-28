@@ -13,7 +13,7 @@ let isFirstSubmission = true; // Flag to track if it's the first submission
     // --- FUNCTION to display the user's message ---
     const displayUserMessage = (message) => {
         const userMessageDiv = document.createElement('div');
-        userMessageDiv.className = 'user-message-box flex-container align-center justify-right';
+        userMessageDiv.className = 'user-message-box flex-container justify-right';
 
         const userParagraph = document.createElement('p');
         userParagraph.className = 'fs-24 light-black';
