@@ -470,27 +470,21 @@ footer {
     line-height: 1.5;
     flex-direction: column;
     gap: 1rem;
-    overflow-y: auto;
-    max-height: 60vh;
     flex-grow: 1;
     box-sizing: border-box;
 }
 
-/* .chat-text {
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-} */
 
 .chat-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     flex-grow: 1;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 .chat-container p {
-    /* min-width: 0; */
-    /* overflow-wrap: break-word; */
     word-break: break-all;
 }
 
@@ -553,6 +547,9 @@ footer .submit-btn svg {
     display: none;
 }
 
+.mobile-chatbox {
+    display: flex;
+}
 
 @media (min-width: 600px) {
     .mobile-text {

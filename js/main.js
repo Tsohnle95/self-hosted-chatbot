@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatContainer = document.querySelector('.chat-container');
 
 
-let isFirstSubmission = true; // Flag to track if it's the first submission
+    let isFirstSubmission = true; // Flag to track if it's the first submission
 
     // --- FUNCTION to display the user's message ---
     const displayUserMessage = (message) => {
@@ -26,6 +26,8 @@ let isFirstSubmission = true; // Flag to track if it's the first submission
         userMessageDiv.appendChild(userParagraph);
         userMessageDiv.appendChild(userInitial);
         chatContainer.appendChild(userMessageDiv);
+
+        scrollToBottom();
     };
 
     // --- FUNCTION to display the Aos message ---
@@ -47,6 +49,14 @@ let isFirstSubmission = true; // Flag to track if it's the first submission
         aiMessageContainer.appendChild(aiIconDiv);
         aiMessageContainer.appendChild(aiParagraph);
         chatContainer.appendChild(aiMessageContainer);
+
+        scrollToBottom();
+    };
+
+    // --- FUNCTION to automatically scroll to the bottom ---
+    const scrollToBottom = () => {
+        // The chatContainer variable is already defined in your code
+        chatContainer.scrollTop = chatContainer.scrollHeight;
     };
 
     // --- FUNCTION to get response from the AI backend ---
@@ -88,47 +98,47 @@ let isFirstSubmission = true; // Flag to track if it's the first submission
 
     // --- LOGIC: The function that handles submission ---
     // --- LOGIC: The function that handles submission ---
-const submission = (event) => {
-    // Prevent form from submitting and reloading the page
-    event.preventDefault();
+    const submission = (event) => {
+        // Prevent form from submitting and reloading the page
+        event.preventDefault();
 
-    // Check if it's the first time the user has submitted
-    if (isFirstSubmission) {
-        // Find the container with the example messages
-        const initialMessages = document.querySelector('.initial-chat-examples');
-        
-        // If that container exists...
-        if (initialMessages) {
-            // ...remove it.
-            initialMessages.remove();
-        } // <-- The first missing brace goes here to close the inner 'if'
+        // Check if it's the first time the user has submitted
+        if (isFirstSubmission) {
+            // Find the container with the example messages
+            const initialMessages = document.querySelector('.initial-chat-examples');
 
-        // Now that we have handled the first submission, set the flag to false
-        // so this block of code will never run again.
-        isFirstSubmission = false;
-    } // <-- The second brace goes here to close the outer 'if'
+            // If that container exists...
+            if (initialMessages) {
+                // ...remove it.
+                initialMessages.remove();
+            } // <-- The first missing brace goes here to close the inner 'if'
 
-    // --- The rest of the function continues as normal ---
+            // Now that we have handled the first submission, set the flag to false
+            // so this block of code will never run again.
+            isFirstSubmission = false;
+        } // <-- The second brace goes here to close the outer 'if'
 
-    // Check which input field has a value
-    const userQuery = desktopInput.value.trim() || mobileInput.value.trim();
+        // --- The rest of the function continues as normal ---
 
-    // If both fields are empty, do nothing
-    if (!userQuery) {
-        return;
-    }
+        // Check which input field has a value
+        const userQuery = desktopInput.value.trim() || mobileInput.value.trim();
 
-    // 1. Display the user's message on the screen
-    displayUserMessage(userQuery);
+        // If both fields are empty, do nothing
+        if (!userQuery) {
+            return;
+        }
 
-    // 2. Send the user's query to the backend
-    getAIResponse(userQuery);
+        // 1. Display the user's message on the screen
+        displayUserMessage(userQuery);
+
+        // 2. Send the user's query to the backend
+        getAIResponse(userQuery);
 
 
-    // 3. Clear both input fields after submission
-    desktopInput.value = '';
-    mobileInput.value = '';
-};
+        // 3. Clear both input fields after submission
+        desktopInput.value = '';
+        mobileInput.value = '';
+    };
 
     // --- BINDING: Attach the event listeners ---
 
