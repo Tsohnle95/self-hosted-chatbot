@@ -16,7 +16,7 @@ let isFirstSubmission = true; // Flag to track if it's the first submission
         userMessageDiv.className = 'user-message-box flex-container align-center justify-right';
 
         const userParagraph = document.createElement('p');
-        userParagraph.className = 'desktop-text fs-24 light-black';
+        userParagraph.className = 'fs-24 light-black';
         userParagraph.textContent = message;
 
         const userInitial = document.createElement('span');
@@ -41,7 +41,7 @@ let isFirstSubmission = true; // Flag to track if it's the first submission
         aiIconDiv.appendChild(aiImage);
 
         const aiParagraph = document.createElement('p');
-        aiParagraph.className = 'desktop-text fs-24 light-black';
+        aiParagraph.className = 'fs-24 light-black';
         aiParagraph.textContent = message;
 
         aiMessageContainer.appendChild(aiIconDiv);
