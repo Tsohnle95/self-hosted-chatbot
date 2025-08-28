@@ -290,7 +290,10 @@ header>div>div:nth-of-type(1) {
     background-color: #f8c7df; /* The pink user message bubble */
     padding: .5rem;
     border-radius: .375rem .375rem 0 .375rem;
-    /* width: 100%; */
+}
+
+.user-message-box {
+    margin-right: 1rem;
 }
 
 
@@ -518,7 +521,6 @@ footer {
     width: 100%;
 }
 
-
 /* .form-input:focus {
     background-image: none
 } */
@@ -556,8 +558,6 @@ footer .submit-btn svg {
 .mobile-chatbox .input-wrapper {
     display: none;
 }
-
-
 
 @media (min-width: 600px) {
     .mobile-text {
