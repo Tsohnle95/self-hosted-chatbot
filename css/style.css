@@ -597,11 +597,20 @@ footer .submit-btn svg {
     .mobile-input {
         display: none;
     }
+
     .mobile-chatbox .input-wrapper{
         display: block;
     }
 
     .app footer {
         display: none;
+    }
+
+    .app h1 {
+        font-size: 2.074rem;
+    }
+
+    .app .github-btn {
+        padding: .5rem 1rem;
     }
 }
