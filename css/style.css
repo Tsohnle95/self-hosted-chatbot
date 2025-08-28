@@ -486,8 +486,12 @@ footer {
     box-sizing: border-box;
 }
 
+.app footer .inner-container {
+    padding: 0 1rem;
+}
+
 .app main > .inner-container {
-    padding: 0 .5rem;
+    padding: 0 1rem;
 }
 
 .chat-text {
