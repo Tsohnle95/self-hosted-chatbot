@@ -34,13 +34,18 @@ main::before {
     transform: translate(-50%, -50%);
     width: calc(100% - 4rem);
     max-width: 950px;
-    height: 290px;
+    height: calc(100% + 4rem); 
+    background-size: cover; 
     background-image: url(../img/gradient-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 2rem;
-    filter: blur(25px);
+    filter: blur(100px);
     z-index: -1;
+}
+
+.app-chatbox {
+    position: relative;
 }
 
 .inner-container {
