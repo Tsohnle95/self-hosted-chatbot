@@ -44,9 +44,7 @@ main::before {
     z-index: -1;
 }
 
-.app-chatbox {
-    position: relative;
-}
+
 
 .inner-container {
     width: 100%;
