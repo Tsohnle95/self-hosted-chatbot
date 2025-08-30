@@ -34,7 +34,7 @@ main::before {
     transform: translate(-50%, -50%);
     width: calc(100% - 4rem);
     max-width: 950px;
-    height: calc(100% + 4rem); 
+    height: 100%;
     background-size: cover; 
     background-image: url(../img/gradient-bg.png);
     background-position: center;
@@ -43,7 +43,6 @@ main::before {
     filter: blur(100px);
     z-index: -1;
 }
-
 
 
 .inner-container {
