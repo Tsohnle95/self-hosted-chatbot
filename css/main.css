@@ -228,8 +228,8 @@ footer {
 }
 
 .chat-container p {
-    overflow-wrap: break-word;
-    word-break: break-all;
+    /* overflow-wrap: break-word;
+    word-break: break-all; */
 }
 
 .app .flow-icon {
