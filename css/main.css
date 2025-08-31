@@ -12,6 +12,10 @@ header svg {
     margin-left: .75rem;
 }
 
+.index .header {
+justify-content: space-between;
+}
+
 header img {
     width: 1.75rem;
 }
@@ -314,6 +318,12 @@ footer svg {
         font-size: 2.488rem;
     }
 
+    .index .header {
+        justify-content: center;
+        /* visibility: hidden; */
+
+    }
+
     .desktop-footer {
         display: block;
         max-width: 22rem;
@@ -430,3 +440,4 @@ footer svg {
         width: 2.75rem;
     }
 }
+
