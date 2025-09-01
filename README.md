@@ -1,6 +1,6 @@
 # Cortexa: My Friendly Local AI Chat Assistant
 
-Cortexa is a responsive and intuitive AI chat application designed to demonstrate the capabilities of locally hosted large language models. This project features a clean web interface, built HTML, CSS and JS, backed by a Node.js Express server. The server orchestrates communication with a local Ollama instance running the tinyllama:chat model, providing an entirely self-contained AI chat experience.
+Cortexa is a responsive and intuitive AI chat application designed to demonstrate the capabilities of locally hosted large language models. This project features a clean web interface, built HTML, CSS and JS, backed by a Node.js Express server. The server orchestrates communication with a local Ollama instance running the tinyllama:chat LLM, providing an entirely self-contained AI chat experience.
 
 This project emphasizes local-first AI, allowing users to experience the power of large language models without relying on external cloud services, ensuring privacy and faster response times.
 
